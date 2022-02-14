@@ -1,24 +1,22 @@
 export class Calculator {
-    firstNum: number;
-    secondNum: number;
-    operation: string;
   
-  
-    
-  
-    constructor(firstNum: number, secondNum: number, operation: string) {
-        this.firstNum = firstNum;
-        this.secondNum = secondNum;
-        this.operation = operation;
+    constructor() {
+
     }
   
-    calculate(){
-      if(this.operation === "+") return this.firstNum + this.secondNum
-      else if(this.operation === "-") return this.firstNum - this.secondNum
-      else if(this.operation === "/") return this.firstNum / this.secondNum
-      else if(this.operation === "*") return this.firstNum * this.secondNum
-      else return "Third operator must be string type one of the(-, +, /, *)"
-      }
-  }
-  
-  
+    calculate(firstNum: number, secondNum: number, operation: string){
+        switch (operation) {
+            case "+":
+                return firstNum + secondNum
+            case "-":
+                return firstNum - secondNum
+            case "/":
+                return firstNum / secondNum
+            case "*":
+                return firstNum * secondNum
+            default:
+                return "Third operator must be string type one of the(-, +, /, *)"    
+        
+        }
+    }
+}
