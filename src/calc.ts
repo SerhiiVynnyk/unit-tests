@@ -15,7 +15,7 @@ export class Calculator {
             case "*":
                 return firstNum * secondNum
             default:
-                return "Third operator must be string type one of the(-, +, /, *)"    
+                throw "Third operator must be string type one of the(-, +, /, *)"    
         
         }
     }
