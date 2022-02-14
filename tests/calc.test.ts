@@ -14,7 +14,6 @@ describe("test Calculator class", () => {
     expect(calc.calculate(4,5,"*")).toBe(20);
   });
   it("should return exeption", () => {
-    // expect(calc.calculate(4,5,"n")).toThrow("Uncaught Third operator must be string type one of the(-, +, /, *)");
     expect(() => calc.calculate(4,5,"n")).toThrow();
   });
 });
